@@ -35,6 +35,11 @@ aside h3 {
     font-size: 28px;
 }
 
+aside h1 {
+    margin-top: 50px;
+    font-size: 28px;
+}
+
 aside ul {
     list-style: none
 }
