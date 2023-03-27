@@ -22,5 +22,6 @@ urlpatterns = [
     path('', include('main.urls')),
     path('news/', include('news.urls')),
     path('auth/', include('authapp.urls')),
-    path('success/', TemplateView.as_view(template_name='success.html'), name='success')
+    path('success/', TemplateView.as_view(template_name='success.html'), name='success'),
+    path('about/', include('about_as.urls')),
 ]

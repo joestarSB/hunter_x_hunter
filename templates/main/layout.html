@@ -28,11 +28,11 @@
         <a href="{% url 'index' %}">
             <li><i class="fas fa-home"></i>Главная</li>
         </a>
-        <a href="#">
+        <a href="{% url 'about' %}">
             <li><i class="fas fa-file-signature"></i>Про нас</li>
         </a>
         <a href="{% url 'news_home' %}">
-            <li><i class="fas fa-file-signature"></i>Новости на сайте</li>
+            <li><i class="fas fa-file-signature"></i>F.A.Q</li>
         </a>
 
         {% if request.user.is_authenticated %}
@@ -50,9 +50,7 @@
         {% if request.user.is_superuser %}
 
         <a href="{% url 'create' %}">
-            <li>
-                <button class="btn btn-info"><i class="fa fa-plus-circle"></i>Добавить запись</button>
-            </li>
+
         </a>
 
         {% endif %}
