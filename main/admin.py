@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Gems, Category
+
+class GemsAdmin(admin.ModelAdmin):
+    list_display = ['title', 'description', 'balance']
+
+admin.site.register(Gems, GemsAdmin)
+admin.site.register(Category)
