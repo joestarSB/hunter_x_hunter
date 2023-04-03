@@ -8,5 +8,7 @@ def index(request):
         'title': 'Title'
     })
 
-class GemsDetailView(generic.DetailView):
-    model = Gems
+def get_gems(request):
+    gems = Gems.objects.all()
+    print(gems)
+    return render(request, 'main/index.html', context={'gems': gems})

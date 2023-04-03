@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import index
+from .views import index, get_gems
 
 urlpatterns = [
-    path('', index, name='index')
+    path('', get_gems, name='index')
 ]
