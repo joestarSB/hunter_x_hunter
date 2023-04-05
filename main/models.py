@@ -7,7 +7,7 @@ class Gems(models.Model):
     description = models.TextField()
     balance = models.DecimalField(
         default=0,
-        decimal_places=2,
+        decimal_places=0,
         max_digits=10,
         validators=[MinValueValidator(limit_value=0.01)]
     )

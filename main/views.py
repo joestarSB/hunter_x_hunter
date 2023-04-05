@@ -10,5 +10,8 @@ def index(request):
 
 def get_gems(request):
     gems = Gems.objects.all()
-    print(gems)
     return render(request, 'main/index.html', context={'gems': gems})
+
+def gems_view(request, gem_id):
+    gems = Gems.objects.all()
+    return render(request, 'main/store.html', context={'gems': gems})
