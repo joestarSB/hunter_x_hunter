@@ -1,9 +1,10 @@
 {% extends 'main/layout.html' %}
 
 {% block title %}{{ gem.title }}{% endblock %}
-{{ gem.title }}
-{{ gem.description }}
-{{ gem.balance }}
-<a href="{% url '#' %}">
-            <li><i class="fas fa-file-signature"></i>Купить</li>
-        </a>
+<h1 align="center" style="color:#ffffff">Магазин детей и травы</h1>
+<h1 align="center" style="color:#ffffff">{% block content %}<br></h1>
+<h1 align="center" style="color:#ffffff">{{ gem.title }}<br></h1>
+<h1 align="center" style="color:#ffffff">{{ gem.description }}<br></h1>
+<h1 align="center" style="color:#ffffff">{{ gem.balance }}<br></h1>
+
+{% endblock %}
