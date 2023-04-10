@@ -10,5 +10,4 @@ def index(request):
 
 def get_gems(request):
     gems = Gems.objects.all()
-    print(gems)
     return render(request, 'main/index.html', context={'gems': gems})
