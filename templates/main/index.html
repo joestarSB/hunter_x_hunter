@@ -6,7 +6,7 @@
 <h1 align="center" style="color:#ffffff">Магазин детей и травы</h1>
 <div class="features">
     {% for gem in gems %}
-    <a href="{% url 'gems' gem_id=gem.id %}">
+    <a href="{% url 'gem' gem_id=gem.id %}">
             <li><i class="fas fa-file-signature"></i>Приобрести</li>
         </a>
     {{ gem.title }}<br>
