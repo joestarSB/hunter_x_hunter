@@ -1,16 +1,16 @@
 {% extends 'main/layout.html' %}
-
 {% block title %}Главная{% endblock %}
-
 {% block content %}
-<h1 align="center" style="color:#ffffff">Магазин детей и травы</h1>
-<div class="features">
+  <h1 align="center" style="color:#ffffff">Магазин детей и травы</h1>
+  <ul class="features">
     {% for gem in gems %}
-    <a href="{% url 'gem' gem_id=gem.id %}">
-            <li><i class="fas fa-file-signature"></i>Приобрести</li>
+      <li>
+        <a href="{% url 'gem' gem_id=gem.id %}">
+          <i class="fas fa-file-signature"></i>Приобрести
         </a>
-    {{ gem.title }}<br>
-    {{ gem.balance }}<br>
+        {{ gem.title }}<br>
+        {{ gem.balance }}<br>
+      </li>
     {% endfor %}
-</div>
+  </ul>
 {% endblock %}

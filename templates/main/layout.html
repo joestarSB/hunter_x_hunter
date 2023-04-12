@@ -12,7 +12,9 @@
     {% endblock %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/store.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
 <body>
@@ -54,28 +56,7 @@
         {% endif %}
     </ul>
 </aside>
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h3>О нас</h3>
-        <p>Мы гарантируем честность, качество и безопасность покупок.</p>
-      </div>
-      <div class="col-md-4">
-        <h3>Связаться с нами</h3>
-        <p>Наш адрес, номер телефона и адрес электронной почты.</p>
-      </div>
-      <div class="col-md-4">
-        <h3>Последние новости</h3>
-        <ul>
-          <li><a href="#">Статья 1</a></li>
-          <li><a href="#">Статья 2</a></li>
-          <li><a href="#">Статья 3</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
+
 
 <main>
     {% block content %}
