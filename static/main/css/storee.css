@@ -1,38 +1,51 @@
+ .page-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 
+.product {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
 
-/* Стили для формы оплаты */
+.product-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
-form {
+.product-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.payment-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 }
 
-label {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-select {
+.payment-form__label {
   font-size: 16px;
-  padding: 5px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
 }
 
-button[type="submit"] {
-  font-size: 18px;
-  padding: 10px 20px;
-  background-color: #008CBA;
-  color: #FFFFFF;
+.payment-form__select {
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.payment-form__button {
+  font-size: 16px;
+  background-color: #0066cc;
+  color: #fff;
+  padding: 10px;
   border: none;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
-  background-color: #005F6B;
+.payment-form__button:hover {
+  background-color: #0052a3;
 }
