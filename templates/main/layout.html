@@ -12,8 +12,9 @@
     {% endblock %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'main/css/indexx.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/signup.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footerr.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/storee.css' %}">
       <link rel="stylesheet" href="{% static 'main/css/test.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -29,6 +30,8 @@
     <h3>Навигация по сайту</h3>
     {% endif %}
     <ul>
+        <a href="{% url '#' %}">
+            <li><i class="fas fa-home"></i>Кабинет</li>
         <a href="{% url 'index' %}">
             <li><i class="fas fa-home"></i>Главная</li>
         </a>
@@ -63,5 +66,6 @@
     {% block content %}
     {% endblock %}
 </main>
+
 </body>
 </html>
