@@ -25,11 +25,7 @@
     <img src="{% static 'main/img/Редан-removebg-preview.png' %}" alt="Лого">
     <span class="logo"></span>
     {% load i18n %}
-    {% if request.user.is_authenticated %}
-    <h3>Hi, {{ request.user.username }}</h3>
-    {% else %}
     <h3>Навигация по сайту</h3>
-    {% endif %}
     <ul>
         <a href="{% url 'account' %}">
             <li><i class="fas fa-file-signature"></i>Кабинет</li>
