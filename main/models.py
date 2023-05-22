@@ -1,4 +1,5 @@
 from django.core.validators import MinValueValidator
+from django.contrib.auth.models  import User
 from django.db import models
 
 
@@ -12,6 +13,7 @@ class Gems(models.Model):
         validators=[MinValueValidator(limit_value=0.01)]
     )
     category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
+    users = models.ManyToManyField(User)
 
 
 
@@ -20,3 +22,4 @@ class Category(models.Model):
 
     def __str__(self):
         return self.title
+
