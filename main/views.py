@@ -23,7 +23,6 @@ def get_gem(request, gem_id):
 
 def buy_gem(request, gem_id):
     gem = get_object_or_404(Gems, pk=gem_id)
-    gem.users = request.user
     form = BuyGemForm(request.POST or None)
     error = ''
     if request.method == 'POST':

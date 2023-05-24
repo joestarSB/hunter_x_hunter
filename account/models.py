@@ -1,4 +1,4 @@
 from django.db import models
 
 class UID(models.Model):
-    uid = models.IntegerField(max_length=66)
+    uid = models.CharField(max_length=66)

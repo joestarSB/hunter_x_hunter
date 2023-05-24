@@ -15,7 +15,7 @@
           <option value="paypal">PayPal</option>
           <option value="yandexMoney">Яндекс.Деньги</option>
         </select>
-           <a href="{% url 'buy_gem' %}">
+           <a href="{% url 'buy_gem' gem.id %}">
             <li><i class="fas fa-file-signature"></i>Купить</li>
         </a>
             {% else %}
