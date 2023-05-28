@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ gem.title }}{% endblock %}
+
+
+{% block content %}
+<div class="features">
+    <form method="post" style="color:#ffffff" align="center">
+        {% csrf_token %}
+        {% for field in form %}
+        <p>{{ field.label }}</p>
+        {{ field }}<br>
+        {% endfor %}
+    </form>
+</div>
+<button class="btn btn-info" align="right"><i class="fa fa-plus-circle"></i>Купить</button>
+{% endblock %}

@@ -8,15 +8,19 @@
 <h1 align="center" style="color:#ffffff"> Стоимость: {{ gem.balance }} рублей<br></h1>
 <main>
       <form>
+          {% if request.user.is_authenticated %}
         <label for="paymentMethod" align="center" style="color:#ffffff">Выберите способ оплаты:</label>
         <select name="paymentMethod" id="paymentMethod">
           <option value="creditCard">Кредитная карта</option>
           <option value="paypal">PayPal</option>
           <option value="yandexMoney">Яндекс.Деньги</option>
         </select>
-          <button href="https://pay.enot.io/redirect-check?m=43505&oa=379&o=4504583&cr=RUB&c=%D0%9E%D0%BF%D0%BB%D0%B0%D1%82%D0%B0+%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0+4504583&p=cd&success_url=https%3A%2F%2Fgenshindrop.com%2Fdeposit%2Fstatus%2F4504583&s=98d0872237dbe9488ce7dc6434d3f5e2" align="center">Оплатить>
-
-          </button>
+           <a href="{% url 'buy_gem' gem.id %}">
+            <li><i class="fas fa-file-signature"></i>Купить</li>
+        </a>
+            {% else %}
+          <h1 align="center" style="color:#ffffff">Авторезируйтесь для покупки</h1>
+          {% endif %}
       </form>
     </main>
 {% endblock %}

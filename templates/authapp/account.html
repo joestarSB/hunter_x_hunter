@@ -1,0 +1,11 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Личный Кабинет{% endblock %}
+
+{% block content %}
+<div class="user-info">
+    <h2 class="user-info__username" align="right">{{ request.user.username }}</h2>
+    <h2 class="user-info__id" align="right">ID: {{ request.user.id }}</h2>
+</div>
+<h1 align="center" style="color:#ffffff">В разработке...</h1>
+{% endblock %}

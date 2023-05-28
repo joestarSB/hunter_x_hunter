@@ -1,3 +1,4 @@
 from django.db import models
 
-# Create your models here.
+class UID(models.Model):
+    uid = models.CharField(max_length=66)

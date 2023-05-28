@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{% static 'main/css/footerr.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/storee.css' %}">
       <link rel="stylesheet" href="{% static 'main/css/test.css' %}">
+     <link rel="stylesheet" href="{% static 'main/css/acceunt.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
 <body>
@@ -24,20 +25,20 @@
     <img src="{% static 'main/img/Редан-removebg-preview.png' %}" alt="Лого">
     <span class="logo"></span>
     {% load i18n %}
-    {% if request.user.is_authenticated %}
-    <h3>Hi, {{ request.user.username }}</h3>
-    {% else %}
     <h3>Навигация по сайту</h3>
-    {% endif %}
     <ul>
-        <a href="{% url '#' %}">
-            <li><i class="fas fa-home"></i>Кабинет</li>
+        <a href="{% url 'account' %}">
+            <li><i class="fas fa-file-signature"></i>Кабинет</li>
+        </a>
+
         <a href="{% url 'index' %}">
             <li><i class="fas fa-home"></i>Главная</li>
         </a>
+
         <a href="{% url 'about' %}">
             <li><i class="fas fa-file-signature"></i>Про нас</li>
         </a>
+
         <a href="{% url 'news_home' %}">
             <li><i class="fas fa-file-signature"></i>F.A.Q</li>
         </a>
