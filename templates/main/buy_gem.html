@@ -4,14 +4,16 @@
 
 
 {% block content %}
-<div class="features">
-    <form method="post" style="color:#ffffff" align="center">
-        {% csrf_token %}
-        {% for field in form %}
-        <p>{{ field.label }}</p>
-        {{ field }}<br>
-        {% endfor %}
-    </form>
+<div class="main-wrapper" style="width: 75%; margin: 0 auto;">
+    <div class="features" style="display: flex; justify-content: center">
+        <form method="post" style="color:#ffffff">
+            {% csrf_token %}
+            {% for field in form %}
+            <p>{{ field.label }}</p>
+            {{ field }}<br>
+            {% endfor %}
+        </form>
+    </div>
+    <button class="btn btn-info buy-btn"><i class="fa fa-plus-circle"></i>Купить</button>
 </div>
-<button class="btn btn-info" align="right"><i class="fa fa-plus-circle"></i>Купить</button>
 {% endblock %}
